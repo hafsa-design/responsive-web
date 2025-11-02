@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch.it</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f9f9f9; /* light background */
+            color: #111;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Containers */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff; /* white header for light theme */
+            color: #1a1a1a; /* dark text */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        header h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 2em; /* mobile default */
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+        }
+
+        header nav ul li a {
+            font-family: 'Teko', sans-serif;
+            font-size: 1.5em;
+            color: #1a1a1a;
+        }
+
+        /* Main Content */
+        .main-container {
+            padding: 32px 16px; /* larger spacing for main container */
+        }
+
+        .main-container h2 {
+            font-family: 'Teko', sans-serif;
+            font-size: 2em;
+            margin-bottom: 16px;
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        .movie-card {
+            background-color: #ffffff; /* white card */
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-card p {
+            margin-top: 8px;
+            font-size: 1.5em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffffff; /* white footer */
+            color: #1a1a1a;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            padding: 16px 0;
+        }
+
+        /* Buttons (optional for later) */
+        button {
+            font-family: 'Teko', sans-serif;
+            font-size: 2em;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Typography & Spacing */
+        @media (min-width: 720px) {
+            header h1 {
+                font-size: 3em;
+            }
+            .header-container nav ul {
+                gap: 32px;
+            }
+            .main-container {
+                padding: 32px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            header h1 {
+                font-size: 3em;
+            }
+            .header-container nav ul {
+                gap: 48px;
+            }
+            .main-container {
+                padding: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">watch.it</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container main-container">
+            <h2>Popular 1990s Movies</h2>
+            <div class="movies-grid">
+                <div class="movie-card">
+                    <img src="images/ddl.jpg" alt="Dilwale Dulhania Le Jayenge">
+                    <p>Dilwale Dulhania Le Jayenge</p>
+                </div>
+                <div class="movie-card">
+                    <img src="images/salman.jpg" alt="Salman Khan Movie">
+                    <p>Salman Khan Movie</p>
+                </div>
+                <div class="movie-card">
+                    <img src="images/mr_india.jpg" alt="Mr. India">
+                    <p>Mr. India</p>
+                </div>
+                <div class="movie-card">
+                    <img src="images/aa_ab.jpg" alt="Aa Ab Laut Chalein">
+                    <p>Aa Ab Laut Chalein</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 watch.it. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
